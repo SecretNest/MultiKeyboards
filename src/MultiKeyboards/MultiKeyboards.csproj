@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net4</TargetFrameworks>
+    <RootNamespace>SecretNest.MultiKeyboards</RootNamespace>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/scegg/MultiKeyboards</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/scegg/MultiKeyboards</RepositoryUrl>
+    <PackageReleaseNotes>Adds support for low end bar code scanners, which work as a keyboard only.
+
+This is a full solution for getting code scanned from multiple low end bar code scanners, including:
+
+Multiple scanners support, 
+Device Recognizing by code scanning</PackageReleaseNotes>
+    <Authors>Allen Cui</Authors>
+    <Company>SecretNest.info</Company>
+    <Product>Multi Keyboards</Product>
+    <Description>Adds support for low end bar code scanners, which work as a keyboard only.
+
+This is a full solution for getting code scanned from multiple low end bar code scanners, including:
+
+Multiple scanners support, 
+Device Recognizing by code scanning</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

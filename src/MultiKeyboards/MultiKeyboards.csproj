@@ -30,13 +30,6 @@ Device Recognizing by code scanning</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
 

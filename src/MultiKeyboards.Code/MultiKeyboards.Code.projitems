@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c10c0bdb-0d9a-4056-ae8d-188e3bddfb04</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SecretNest.MultiKeyboards</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)KeyboardDeviceInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Keyboards.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KeyStateChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeWindowWrap.cs" />
+  </ItemGroup>
+</Project>

@@ -6,4 +6,7 @@ This is a full solution for getting code scanned from multiple low end bar code 
 * Device Recognizing by code scanning
 
 # Note
-This package is built on dotNet framework 4.0 and support x86 (32bit) platform target only. You can use this code on x64 but still need to keep the platform target for build x86 instead of Any CPU or x64.
+Package is built on dotNet framework 4.0 and support x86 (32bit) platform target only. You can use this code on x64 but still need to keep the platform target for build x86 instead of Any CPU or x64.
+
+# Thanks
+Many thanks to Emma Burrows and Steve Messer. They explained the API of Windows in https://www.codeproject.com/Articles/17123/Using-Raw-Input-from-C-to-handle-multiple-keyboard. But no code is directly used in this library due to the limitation of LGPLv3.

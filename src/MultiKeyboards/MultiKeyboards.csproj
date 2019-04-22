@@ -21,6 +21,12 @@ This is a full solution for getting code scanned from multiple low end bar code 
 
 Multiple scanners support, 
 Device Recognizing by code scanning</Description>
+    <AssemblyName>SecretNest.MultiKeyboards</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net4|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,5 +35,11 @@ Device Recognizing by code scanning</Description>
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <Import Project="..\MultiKeyboards.Code\MultiKeyboards.Code.projitems" Label="Shared" />
 
 </Project>

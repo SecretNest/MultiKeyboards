@@ -10,3 +10,7 @@ Package is built on dotNet framework 4.0 and support x86 (32bit) platform target
 
 # Thanks
 Many thanks to Emma Burrows and Steve Messer. They explained the API of Windows in https://www.codeproject.com/Articles/17123/Using-Raw-Input-from-C-to-handle-multiple-keyboard.
+
+# License
+Test project is released only MIT license.
+Other projects are released only LGPL-3.0 license.

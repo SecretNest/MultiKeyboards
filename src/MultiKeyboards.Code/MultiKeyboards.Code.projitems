@@ -9,9 +9,13 @@
     <Import_RootNamespace>SecretNest.MultiKeyboards</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Combiner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Combiner_NumberOnlyCodeAppend.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Delegates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)KeyboardDeviceInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Keyboards.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)KeyStateChangedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NativeWindowWrap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextCombinedEventArgs.cs" />
   </ItemGroup>
 </Project>

@@ -23,6 +23,7 @@ Multiple scanners support,
 Device Recognizing by code scanning</Description>
     <AssemblyName>SecretNest.MultiKeyboards</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net4|AnyCPU'">

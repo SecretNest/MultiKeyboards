@@ -22,10 +22,15 @@ This is a full solution for getting code scanned from multiple low end bar code 
 
 Multiple scanners support
 Charaters combine until stop sign (e.g., Enter)
-User-defined key-to-text mapping</Description>
+User-defined key-to-text mapping
+
+Please check https://github.com/scegg/MultiKeyboards for demo app.</Description>
     <AssemblyName>SecretNest.MultiKeyboards</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net4|AnyCPU'">

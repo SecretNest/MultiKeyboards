@@ -89,7 +89,7 @@ namespace Test
                 if (listBox_AllKeys.Items.Count == 100)
                     listBox_AllKeys.Items.RemoveAt(99);
 
-                string item = string.Format("Time:{0:HHmmssfff} Handle:{1} Key:{2}", DateTime.Now, handle, key);
+                string item = string.Format("Time:{0:HH:mm:ss.fff} Handle:{1} Key:{2}", DateTime.Now, handle, key);
                 listBox_AllKeys.Items.Insert(0, item);
             }
         }
@@ -103,7 +103,7 @@ namespace Test
                 if (listBox_Code.Items.Count == 100)
                     listBox_Code.Items.RemoveAt(99);
 
-                string item = string.Format("Time:{0:HHmmssfff} Handle:{1} Text:{2}", DateTime.Now, handle, text);
+                string item = string.Format("Time:{0:HH:mm:ss.fff} Handle:{1} Text:{2}", DateTime.Now, handle, text);
                 listBox_Code.Items.Insert(0, item);
             }
         }

@@ -50,6 +50,7 @@ namespace Test
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //Dispose resources
             keyboards.Dispose();
         }
 

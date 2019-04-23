@@ -10,8 +10,9 @@
 
 This is a full solution for getting code scanned from multiple low end bar code scanners, including:
 
-Multiple scanners support, 
-Device Recognizing by code scanning</PackageReleaseNotes>
+Multiple scanners support
+Charaters combine until stop sign (e.g., Enter)
+User-defined key-to-text mapping</PackageReleaseNotes>
     <Authors>Allen Cui</Authors>
     <Company>SecretNest.info</Company>
     <Product>Multi Keyboards</Product>
@@ -19,8 +20,9 @@ Device Recognizing by code scanning</PackageReleaseNotes>
 
 This is a full solution for getting code scanned from multiple low end bar code scanners, including:
 
-Multiple scanners support, 
-Device Recognizing by code scanning</Description>
+Multiple scanners support
+Charaters combine until stop sign (e.g., Enter)
+User-defined key-to-text mapping</Description>
     <AssemblyName>SecretNest.MultiKeyboards</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>

@@ -24,11 +24,13 @@ namespace Test
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Start catching first.
             Keyboards.StartCatching(Handle, CaptureWhileActiveOnly);
 
             combiner = new Combiner();
             combiner.TextCombined += Combiner_TextCombined;
 
+            //Key processing is started when new instance created.
             keyboards = new Keyboards(Handle);
             keyboards.KeyStateChanged += Processor_KeyStateChanged;
 
@@ -75,6 +77,7 @@ namespace Test
         }
         #endregion
 
+        //Process when one key is pressed down.
         void ProcessOneKey(IntPtr handle, Keys key)
         {
             //Send to combiner
@@ -86,21 +89,21 @@ namespace Test
                 if (listBox_AllKeys.Items.Count == 100)
                     listBox_AllKeys.Items.RemoveAt(99);
 
-                string item = string.Format("{0:HHmmssfff} {1}: {2}", DateTime.Now, handle, key);
+                string item = string.Format("Time:{0:HHmmssfff} Handle:{1} Key:{2}", DateTime.Now, handle, key);
                 listBox_AllKeys.Items.Insert(0, item);
             }
         }
 
+        //Process when one text (code) is combined.
         void ProcessOneCode(IntPtr handle, string text)
         {
-
             //Output To ListBox
             lock (listBox_Code)
             {
                 if (listBox_Code.Items.Count == 100)
                     listBox_Code.Items.RemoveAt(99);
 
-                string item = string.Format("{0:HHmmssfff} {1}: {2}", DateTime.Now, handle, text);
+                string item = string.Format("Time:{0:HHmmssfff} Handle:{1} Text:{2}", DateTime.Now, handle, text);
                 listBox_Code.Items.Insert(0, item);
             }
         }

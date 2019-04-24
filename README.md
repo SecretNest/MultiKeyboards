@@ -36,5 +36,5 @@ You can also check the file AsciiCodeAppender.cs for supporting ASCII code betwe
 Many thanks to Emma Burrows and Steve Messer. They explained the API of Windows in [this article](https://www.codeproject.com/Articles/17123/Using-Raw-Input-from-C-to-handle-multiple-keyboard).
 
 # License
-Test and Demo project are released under MIT license.
-Other projects are released under LGPL-3.0 license.
+* Test and Demo project are released under MIT license.
+* Other projects are released under LGPL-3.0 license.

@@ -51,11 +51,11 @@ namespace SecretNest.MultiKeyboards
         /// Append a key to a buffer.
         /// </summary>
         /// <param name="handle">Handle of the buffer to be appended on.</param>
-        /// <param name="key">Key to be appended.</param>
-        public void AppendKey(IntPtr handle, Keys key)
+        /// <param name="keyInfo">Key to be appended.</param>
+        public void AppendKey(IntPtr handle, KeyInfo keyInfo)
         {
             var buffer = buffers.GetOrAdd(handle, i => new StringBuilder());
-            buffer.Append(codeAppendCallback(key, out var isPackageFinished));
+            buffer.Append(codeAppendCallback(keyInfo, out var isPackageFinished));
             if (isPackageFinished)
             {
                 string result = buffer.ToString();

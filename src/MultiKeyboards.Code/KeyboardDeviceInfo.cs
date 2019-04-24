@@ -36,16 +36,32 @@ namespace SecretNest.MultiKeyboards
             Description = description;
         }
 
+        /// <summary>
+        /// Returns a string that represents the current keyboard.
+        /// </summary>
+        /// <returns>A string that represents the current keyboard.</returns>
         public override string ToString()
         {
             return string.Format("Name: {0}\nType: {1}\nHandle: {2}\nDescription: {3}", Name, Type, Handle.ToInt64().ToString("X"), Description);
         }
     }
 
+    /// <summary>
+    /// Keyboard device type
+    /// </summary>
     public enum KeyboardDeviceType
     {
+        /// <summary>
+        /// Keyboard
+        /// </summary>
         Keyboard,
+        /// <summary>
+        /// HID device
+        /// </summary>
         Hid,
+        /// <summary>
+        /// Other
+        /// </summary>
         Other
     }
 }

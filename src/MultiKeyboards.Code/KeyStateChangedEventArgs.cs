@@ -13,62 +13,46 @@ namespace SecretNest.MultiKeyboards
         /// <summary>
         /// Gets the handle of the keyboard device.
         /// </summary>
-        public IntPtr Handle { get; }
+        public IntPtr Handle => KeyInfo.Handle;
+
         /// <summary>
         /// Gets whether the key is pressed.
         /// </summary>
-        public bool IsPressed { get; }
+        public bool IsPressed => KeyInfo.IsPressed;
+
         /// <summary>
-        /// Gets the message code.
+        /// Gets the scan code from the key depression.
         /// </summary>
-        public uint Message { get; }
+        public ushort MakeCode => KeyInfo.MakeCode;
+
         /// <summary>
-        /// Gets the key code.
+        /// Gets the flags, combining one or more of RI_KEY_MAKE, RI_KEY_BREAK, RI_KEY_E0, RI_KEY_E1
         /// </summary>
-        public int Code { get; }
+        public ushort Flags => KeyInfo.Flags;
+
+        /// <summary>
+        /// Gets the corresponding Windows message for example (WM_KEYDOWN, WM_SYASKEYDOWN etc).
+        /// </summary>
+        public uint Message => KeyInfo.Message;
+
+        /// <summary>
+        /// Gets the virtual Key Code.
+        /// </summary>
+        public ushort VKey => KeyInfo.VKey;
+
         /// <summary>
         /// Gets the key pressed or released.
         /// </summary>
         public Keys Key { get; }
 
-        internal KeyStateChangedEventArgs(IntPtr handle, bool pressed, uint message, int code, bool isE0BitSet, int makeCode)
-        {
-            Handle = handle;
-            IsPressed = pressed;
-            Message = message;
-            Code = code;
+        /// <summary>
+        /// Gets the key message.
+        /// </summary>
+        public KeyInfo KeyInfo { get; } 
 
-            if (handle == IntPtr.Zero)
-            {
-                if (code == 0x11 /*VK_CONTROL*/)
-                {
-                    Key = Keys.Zoom;
-                    return;
-                }
-            }
-            else if (code == 0x11 /*VK_CONTROL*/)
-            {
-                Key = isE0BitSet ? Keys.RControlKey : Keys.LControlKey;
-            }
-            else if (code == 0x12 /*VK_MENU*/)
-            {
-                Key = isE0BitSet ? Keys.RMenu : Keys.LMenu;
-            }
-            else if (code == 0x12 /*VK_MENU*/)
-            {
-                Key = makeCode == 0x36 /*SC_SHIFT_R*/ ? Keys.RShiftKey : Keys.LShiftKey;
-            }
-            else
-            {
-                try
-                {
-                    Key = (Keys)code;
-                }
-                catch
-                {
-                    Key = Keys.None;
-                }
-            }
+        internal KeyStateChangedEventArgs(KeyInfo keyInfo)
+        {
+            KeyInfo = keyInfo;
         }
     }
 }

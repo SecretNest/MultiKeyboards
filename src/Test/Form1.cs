@@ -44,8 +44,7 @@ namespace Test
 
         private void Processor_KeyStateChanged(object sender, KeyStateChangedEventArgs e)
         {
-            if (!e.IsPressed)
-                ProcessOneKey(e.Handle, e.Key);
+            ProcessOneKey(e.Handle, e.KeyInfo);
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,10 +78,10 @@ namespace Test
         #endregion
 
         //Process when one key is pressed down.
-        void ProcessOneKey(IntPtr handle, Keys key)
+        void ProcessOneKey(IntPtr handle, KeyInfo keyInfo)
         {
             //Send to combiner
-            combiner.AppendKey(handle, key);
+            combiner.AppendKey(handle, keyInfo);
 
             //Output To ListBox
             lock (listBox_AllKeys)
@@ -90,7 +89,7 @@ namespace Test
                 if (listBox_AllKeys.Items.Count == 100)
                     listBox_AllKeys.Items.RemoveAt(99);
 
-                string item = string.Format("Time:{0:HH:mm:ss.fff} Handle:{1} Key:{2}", DateTime.Now, handle, key);
+                string item = string.Format("Time:{0:HH:mm:ss.fff} Handle:{1} Key:{2} (VKey:{3}, Message:{4}, MakeCode:{5}, IsPressed:{6})", DateTime.Now, handle, keyInfo.Key, keyInfo.VKey, keyInfo.Message, keyInfo.MakeCode, keyInfo.IsPressed);
                 listBox_AllKeys.Items.Insert(0, item);
             }
         }

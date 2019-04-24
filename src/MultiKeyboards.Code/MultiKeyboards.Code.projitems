@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Delegates.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)KeyboardDeviceInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Keyboards.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)KeyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)KeyStateChangedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)NativeWindowWrap.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextCombinedEventArgs.cs" />

@@ -28,7 +28,9 @@ namespace Demo
             //Start catching first.
             Keyboards.StartCatching(Handle, CaptureWhileActiveOnly);
 
-            combiner = new Combiner();
+            //combiner = new Combiner(); //Use numeric only
+            combiner = new Combiner(AsciiCodeAppender.CodeAppending);
+
             combiner.TextCombined += Combiner_TextCombined;
 
             //Key processing is started when new instance created.
@@ -45,8 +47,7 @@ namespace Demo
         private void Processor_KeyStateChanged(object sender, KeyStateChangedEventArgs e)
         {
             //Send to combiner
-            if (e.IsPressed)
-                combiner.AppendKey(e.Handle, e.Key);
+            combiner.AppendKey(e.Handle, e.KeyInfo);
         }
 
         private void Combiner_TextCombined(object sender, TextCombinedEventArgs e)

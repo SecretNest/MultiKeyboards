@@ -28,13 +28,17 @@ Please check https://github.com/scegg/MultiKeyboards for demo app.</Description>
     <AssemblyName>SecretNest.MultiKeyboards</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net4|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net4|AnyCPU'">
+    <DocumentationFile>D:\VSProjects\MultiKeyboards\src\MultiKeyboards\SecretNest.MultiKeyboards.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -282,15 +282,11 @@ namespace SecretNest.MultiKeyboards
                 return; //Cannot get the buffer.
             }
 
-            int virtualKey = rawBuffer.Data.VKey;
-            int flags = rawBuffer.Data.Flags;
-
+            ushort virtualKey = rawBuffer.Data.VKey;
             if (virtualKey == 0xFF /*KEYBOARD_OVERRUN_MAKE_CODE*/) return;
 
-            var isE0BitSet = ((flags & 0x02 /*RI_KEY_E0*/) != 0);
-            var isBreakBitSet = ((flags & 0x01 /*RI_KEY_BREAK*/) != 0);
-
-            KeyStateChangedEventArgs e = new KeyStateChangedEventArgs(rawBuffer.Header.hDevice, !isBreakBitSet, rawBuffer.Data.Message, virtualKey, isE0BitSet, rawBuffer.Data.Makecode);
+            KeyInfo keyInfo = new KeyInfo(rawBuffer.Header.hDevice, rawBuffer.Data.Makecode, rawBuffer.Data.Flags, virtualKey, rawBuffer.Data.Message);
+            KeyStateChangedEventArgs e = new KeyStateChangedEventArgs(keyInfo);
 
             KeyStateChanged(this, e);
         }

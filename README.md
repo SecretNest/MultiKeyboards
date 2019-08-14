@@ -22,10 +22,11 @@ There is a demo built as WinForm in demo folder.
 In this demo, you could link multiple keyboard based bar code scanners to scan codes.
 
 You need to prepare some special codes for naming device.
-* 00xx: Set the device name to xx. xx is a 2-digit number and not 00.
-* 0000: Unset the device.
-* 99xx: Validate the name of the device is xx or not. xx is a 2-digit number and not 00.
-* 9900: Validate the device is not named.
+* 00xxx: Set the device name to xxx. xxx is a 3-digit number and not 000.
+* 00000: Unset the device.
+* 99xxx: Validate the name of the device is xxx or not. xxx is a 3-digit number and not 000.
+* 99000: Validate the device is not named.
+* =====: Set this device to direct output mode (for keyboard).
 * Other number based code: Output.
 
 New scanned code or command will be output to the top of the form.

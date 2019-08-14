@@ -32,18 +32,18 @@ namespace Demo
 
             if (keyInfo.Key == Keys.Space)
             {
-                if (keyInfo.IsPressed) return "";
+                if (!keyInfo.IsPressed) return "";
                 else return " ";
             }
             else if (keyInfo.VKey >= 96 && keyInfo.VKey <= 105) ////Char:0-9 ASCII:48-57 (Numeric Panel)
             {
-                if (keyInfo.IsPressed) return "";
+                if (!keyInfo.IsPressed) return "";
                 char c = (char)(keyInfo.VKey - 48);
                 return c.ToString();
             }
             else if (keyInfo.VKey >= 106 && keyInfo.VKey <= 111) //Char:*+,-./ ASCII: 42-47
             {
-                if (keyInfo.IsPressed) return "";
+                if (!keyInfo.IsPressed) return "";
                 char c = (char)(keyInfo.VKey - 64);
                 return c.ToString();
             }

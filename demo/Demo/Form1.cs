@@ -156,8 +156,8 @@ namespace Demo
                     {
                         directOutput.Add(handle);
                         OutputText(string.Format("Pass : Keyboard {0} is set to direct output mode.", handle));
+                        return;
                     }
-                    return;
                 }
 
                 //Normal Output
